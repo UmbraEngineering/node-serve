@@ -31,6 +31,6 @@ The path to serve files from (default is "." or the current working directory).
 The duration of the file cache (defualt is 0). Can support a number of milliseconds, or a more complex time string, eg.
 
 * "5 minutes"
-* "0.5 hours"
-* "2/3 days"
+* "0.5 hr"
+* "2/3 day"
 
