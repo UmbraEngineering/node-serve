@@ -1,0 +1,21 @@
+{
+  "name": "node-serve",
+  "version": "0.0.0",
+  "description": "A static web server module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "bin": {
+    "serve": "server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "expires": "0.0.0",
+    "pkg": "0.0.1-1",
+    "commander": "~1.2.0",
+    "express": "~3.3.3"
+  }
+}
