@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 var pkg      = require('pkg');
 var path     = require('path');
