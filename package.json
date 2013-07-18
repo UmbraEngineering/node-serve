@@ -1,6 +1,6 @@
 {
   "name": "node-serve",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A static web server module",
   "main": "server.js",
   "scripts": {
