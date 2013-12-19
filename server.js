@@ -18,12 +18,23 @@ var server = express();
 var filePath = path.resolve(process.cwd(), program.path);
 var cacheLength = expires.parse(program.cache);
 
+var controller;
+try {
+	controller = require(filePath + '/.serve.js');
+} catch (e) {
+	controller = { };
+}
+
 server.use(function(req, res, next) {
 	console.log('HTTP ' + req.method.toUpperCase() + ' ' + req.url);
 	next();
 });
 
 server.use(express.static(filePath, {maxAge: cacheLength}));
+
+Object.keys(controller).forEach(function(route) {
+	server.get(route, controller[route]);
+});
 
 server.listen(program.port, program.addr, function() {
 	console.log('HTTP server serving ' + filePath + ' on ' + program.addr + ':' + program.port + '...');
